@@ -25,7 +25,6 @@ let noData       = { error: false, message: "No data found", data: [] };
 module.exports = function(app, req, res) {
     
     app.post("/register", (req, res) => {
-        // console.log("api called")
         let name     = (req.body.name)     ? req.body.name     : "",
             email    = (req.body.email)    ? req.body.email    : "",
             password = (req.body.password) ? req.body.password : "",
