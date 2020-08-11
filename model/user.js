@@ -6,9 +6,10 @@ var ObjectId = Schema.ObjectId;
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
+// mongoose.set('useUnifiedTopology', true );
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://127.0.0.1:27017/projectTwo', { useNewUrlParser: true });
+mongoose.connect('mongodb://127.0.0.1:27017/projectTwo', { useNewUrlParser: true, useUnifiedTopology: true });
 
 var UserSchema = new Schema({
     name     : { type: String, default: "" },
