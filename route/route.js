@@ -25,6 +25,7 @@ let noData       = { error: false, message: "No data found", data: [] };
 module.exports = function(app, req, res) {
     
     app.post("/register", (req, res) => {
+        console.log("api called");
         let name     = (req.body.name)     ? req.body.name     : "",
             email    = (req.body.email)    ? req.body.email    : "",
             password = (req.body.password) ? req.body.password : "",
@@ -40,8 +41,10 @@ module.exports = function(app, req, res) {
         })
 
         user.save(function(error, saved) {
+            console.log("done");
             errorMessage.error = error;
-            if(error) return res.send(errorMessage)
+            if(error) return res.send(errorMessage);
+            console.log("no error: ", saved);
             res.send({ error: false, message: "Success", data: saved })
         })
     })
