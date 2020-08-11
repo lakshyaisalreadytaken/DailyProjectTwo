@@ -12,7 +12,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/projectTwo', { useNewUrlParser: true
 
 var UserSchema = new Schema({
     name     : { type: String, default: "" },
-    email    : { type: String, default: "", unique: true },
+    email    : { type: String, default: "" },
     password : { type: String, default: "" },
     address  : { type: String, default: "" },
     mobile   : { type: String, default: "" }
