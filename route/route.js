@@ -1,3 +1,4 @@
+console.log("route file loaded");
 let User  = require('./../model/user');
 let Item  = require('./../model/item');
 let Order = require('./../model/order');
